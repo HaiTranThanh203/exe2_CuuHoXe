@@ -1,0 +1,150 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "nguyen_van_a",
+      "phone": "0987654321",
+      "password": "hashed_password_123",
+      "reviews": [
+        {
+          "id": 101,
+          "rescue_service": "Sửa Xe Minh Hoàng",
+          "rating": 4.5,
+          "comment": "Dịch vụ rất tốt, đến nhanh."
+        }
+      ]
+    }
+  ],
+  "rescue_services": [
+    {
+      "id": 201,
+      "name": "Sửa Xe Minh Hoàng",
+      "address": {
+        "street": "15 Nguyễn Khuyến",
+        "ward": "Văn Miếu",
+        "district": "Đống Đa",
+        "city": "Hà Nội"
+      },
+      "phone": "0981234567",
+      "average_rating": 4.5,
+      "image_url": "https://example.com/images/minh_hoang.jpg"
+    },
+    {
+      "id": 202,
+      "name": "Sửa Chữa Xe Máy Tuấn Anh",
+      "address": {
+        "street": "30 Láng Hạ",
+        "ward": "Láng Hạ",
+        "district": "Ba Đình",
+        "city": "Hà Nội"
+      },
+      "phone": "0977654321",
+      "average_rating": 4.2,
+      "image_url": "https://example.com/images/tuan_anh.jpg"
+    },
+    {
+      "id": 203,
+      "name": "Tiệm Sửa Xe Hùng Phát",
+      "address": {
+        "street": "12 Cầu Giấy",
+        "ward": "Quan Hoa",
+        "district": "Cầu Giấy",
+        "city": "Hà Nội"
+      },
+      "phone": "0965432187",
+      "average_rating": 4.0,
+      "image_url": "https://example.com/images/hung_phat.jpg"
+    },
+    {
+      "id": 204,
+      "name": "Cửa Hàng Sửa Xe Trung Kiên",
+      "address": {
+        "street": "20 Kim Mã",
+        "ward": "Kim Mã",
+        "district": "Ba Đình",
+        "city": "Hà Nội"
+      },
+      "phone": "0954321876",
+      "average_rating": 4.3,
+      "image_url": "https://example.com/images/trung_kien.jpg"
+    },
+    {
+      "id": 205,
+      "name": "Sửa Xe Hoàng Long",
+      "address": {
+        "street": "45 Giải Phóng",
+        "ward": "Phương Liệt",
+        "district": "Thanh Xuân",
+        "city": "Hà Nội"
+      },
+      "phone": "0943218765",
+      "average_rating": 4.1,
+      "image_url": "https://example.com/images/hoang_long.jpg"
+    },
+    {
+      "id": 206,
+      "name": "Tiệm Sửa Chữa Xe Sơn Tùng",
+      "address": {
+        "street": "67 Trường Chinh",
+        "ward": "Khương Mai",
+        "district": "Thanh Xuân",
+        "city": "Hà Nội"
+      },
+      "phone": "0932109876",
+      "average_rating": 3.9,
+      "image_url": "https://example.com/images/son_tung.jpg"
+    },
+    {
+      "id": 207,
+      "name": "Sửa Xe Máy Phát Đạt",
+      "address": {
+        "street": "78 Tôn Đức Thắng",
+        "ward": "Hàng Bột",
+        "district": "Đống Đa",
+        "city": "Hà Nội"
+      },
+      "phone": "0921098765",
+      "average_rating": 4.4,
+      "image_url": "https://example.com/images/phat_dat.jpg"
+    },
+    {
+      "id": 208,
+      "name": "Trung Tâm Sửa Xe Quang Minh",
+      "address": {
+        "street": "34 Trần Duy Hưng",
+        "ward": "Trung Hòa",
+        "district": "Cầu Giấy",
+        "city": "Hà Nội"
+      },
+      "phone": "0910987654",
+      "average_rating": 4.6,
+      "image_url": "https://example.com/images/quang_minh.jpg"
+    },
+    {
+      "id": 209,
+      "name": "Tiệm Sửa Xe Thành Công",
+      "address": {
+        "street": "89 Lê Văn Lương",
+        "ward": "Nhân Chính",
+        "district": "Thanh Xuân",
+        "city": "Hà Nội"
+      },
+      "phone": "0909876543",
+      "average_rating": 4.0,
+      "image_url": "https://example.com/images/thanh_cong.jpg"
+    },
+    {
+      "id": 210,
+      "name": "Dịch Vụ Sửa Xe Hoàng Gia",
+      "address": {
+        "street": "123 Hoàng Quốc Việt",
+        "ward": "Nghĩa Đô",
+        "district": "Cầu Giấy",
+        "city": "Hà Nội"
+      },
+      "phone": "0898765432",
+      "average_rating": 4.7,
+      "image_url": "https://example.com/images/hoang_gia.jpg"
+    }
+  ]
+}
