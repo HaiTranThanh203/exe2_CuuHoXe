@@ -1,5 +1,7 @@
 
 @import "tailwindcss";
+@import 'flowbite';
+
 /* CSS tùy chỉnh thêm nếu cần */
 body {
   font-family: 'Inter', sans-serif;
