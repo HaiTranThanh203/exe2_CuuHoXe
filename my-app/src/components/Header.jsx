@@ -30,7 +30,7 @@ export default function Header() {
       <nav 
         className={`$${
           isOpen ? 'block' : 'hidden'
-        } md:flex md:items-center md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0`}
+        } md:contents md:items-center md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0`}
       >
         <Link to="/" className="block md:inline-block text-gray-800 hover:text-orange-500 font-semibold py-2 md:py-0">
           Trang chủ

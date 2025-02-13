@@ -4,15 +4,42 @@
       "id": 1,
       "username": "nguyen_van_a",
       "phone": "0987654321",
-      "password": "hashed_password_123",
-      "reviews": [
-        {
-          "id": 101,
-          "rescue_service": "Sửa Xe Minh Hoàng",
-          "rating": 4.5,
-          "comment": "Dịch vụ rất tốt, đến nhanh."
-        }
-      ]
+      "password": "hashed_password_123"
+    },
+    {
+      "id": 2,
+      "username": "tran_van_b",
+      "phone": "0976543210",
+      "password": "hashed_password_456"
+    },
+    {
+      "id": 3,
+      "username": "le_thi_c",
+      "phone": "0965432109",
+      "password": "hashed_password_789"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 101,
+      "user_id": 1,
+      "rescue_service_id": 201,
+      "rating": 4.5,
+      "comment": "Dịch vụ rất tốt, đến nhanh."
+    },
+    {
+      "id": 102,
+      "user_id": 2,
+      "rescue_service_id": 202,
+      "rating": 4.2,
+      "comment": "Phục vụ nhiệt tình, giá hợp lý."
+    },
+    {
+      "id": 103,
+      "user_id": 3,
+      "rescue_service_id": 203,
+      "rating": 4.0,
+      "comment": "Chất lượng tốt, sẽ quay lại."
     }
   ],
   "rescue_services": [
@@ -27,7 +54,22 @@
       },
       "phone": "0981234567",
       "average_rating": 4.5,
-      "image_url": "https://example.com/images/minh_hoang.jpg"
+      "image_url": "https://example.com/images/minh_hoang.jpg",
+      "description": "Chuyên sửa chữa xe máy với đội ngũ thợ tay nghề cao, uy tín.",
+      "rescue_type": "Xe máy",
+      "working_hours": "24/7",
+      "owner": "Minh Hoàng",
+      "services": [
+        {
+          "service_name": "Thay dầu xe máy",
+          "price": "100,000 VNĐ"
+        },
+        {
+          "service_name": "Sửa chữa động cơ",
+          "price": "Tùy vào mức độ hư hỏng"
+        }
+      ],
+      "google_map": "https://www.google.com/maps?q=15+Nguyen+Khuyen,Hanoi"
     },
     {
       "id": 202,
@@ -40,7 +82,22 @@
       },
       "phone": "0977654321",
       "average_rating": 4.2,
-      "image_url": "https://example.com/images/tuan_anh.jpg"
+      "image_url": "https://example.com/images/tuan_anh.jpg",
+      "description": "Dịch vụ sửa chữa xe máy chuyên nghiệp, tận tâm với khách hàng.",
+      "rescue_type": "Xe máy",
+      "working_hours": "7h - 22h",
+      "owner": "Tuấn Anh",
+      "services": [
+        {
+          "service_name": "Thay lốp xe",
+          "price": "150,000 VNĐ"
+        },
+        {
+          "service_name": "Bảo dưỡng xe",
+          "price": "200,000 VNĐ"
+        }
+      ],
+      "google_map": "https://www.google.com/maps?q=30+Lang+Ha,Hanoi"
     },
     {
       "id": 203,
@@ -53,98 +110,22 @@
       },
       "phone": "0965432187",
       "average_rating": 4.0,
-      "image_url": "https://example.com/images/hung_phat.jpg"
-    },
-    {
-      "id": 204,
-      "name": "Cửa Hàng Sửa Xe Trung Kiên",
-      "address": {
-        "street": "20 Kim Mã",
-        "ward": "Kim Mã",
-        "district": "Ba Đình",
-        "city": "Hà Nội"
-      },
-      "phone": "0954321876",
-      "average_rating": 4.3,
-      "image_url": "https://example.com/images/trung_kien.jpg"
-    },
-    {
-      "id": 205,
-      "name": "Sửa Xe Hoàng Long",
-      "address": {
-        "street": "45 Giải Phóng",
-        "ward": "Phương Liệt",
-        "district": "Thanh Xuân",
-        "city": "Hà Nội"
-      },
-      "phone": "0943218765",
-      "average_rating": 4.1,
-      "image_url": "https://example.com/images/hoang_long.jpg"
-    },
-    {
-      "id": 206,
-      "name": "Tiệm Sửa Chữa Xe Sơn Tùng",
-      "address": {
-        "street": "67 Trường Chinh",
-        "ward": "Khương Mai",
-        "district": "Thanh Xuân",
-        "city": "Hà Nội"
-      },
-      "phone": "0932109876",
-      "average_rating": 3.9,
-      "image_url": "https://example.com/images/son_tung.jpg"
-    },
-    {
-      "id": 207,
-      "name": "Sửa Xe Máy Phát Đạt",
-      "address": {
-        "street": "78 Tôn Đức Thắng",
-        "ward": "Hàng Bột",
-        "district": "Đống Đa",
-        "city": "Hà Nội"
-      },
-      "phone": "0921098765",
-      "average_rating": 4.4,
-      "image_url": "https://example.com/images/phat_dat.jpg"
-    },
-    {
-      "id": 208,
-      "name": "Trung Tâm Sửa Xe Quang Minh",
-      "address": {
-        "street": "34 Trần Duy Hưng",
-        "ward": "Trung Hòa",
-        "district": "Cầu Giấy",
-        "city": "Hà Nội"
-      },
-      "phone": "0910987654",
-      "average_rating": 4.6,
-      "image_url": "https://example.com/images/quang_minh.jpg"
-    },
-    {
-      "id": 209,
-      "name": "Tiệm Sửa Xe Thành Công",
-      "address": {
-        "street": "89 Lê Văn Lương",
-        "ward": "Nhân Chính",
-        "district": "Thanh Xuân",
-        "city": "Hà Nội"
-      },
-      "phone": "0909876543",
-      "average_rating": 4.0,
-      "image_url": "https://example.com/images/thanh_cong.jpg"
-    },
-    {
-      "id": 210,
-      "name": "Dịch Vụ Sửa Xe Hoàng Gia",
-      "address": {
-        "street": "123 Hoàng Quốc Việt",
-        "ward": "Nghĩa Đô",
-        "district": "Cầu Giấy",
-        "city": "Hà Nội"
-      },
-      "phone": "0898765432",
-      "average_rating": 4.7,
-      "image_url": "https://example.com/images/hoang_gia.jpg"
+      "image_url": "https://example.com/images/hung_phat.jpg",
+      "description": "Sửa chữa xe máy uy tín, giá cả hợp lý.",
+      "rescue_type": "Xe máy",
+      "working_hours": "8h - 21h",
+      "owner": "Hùng Phát",
+      "services": [
+        {
+          "service_name": "Sơn xe máy",
+          "price": "500,000 VNĐ"
+        },
+        {
+          "service_name": "Thay xích xe",
+          "price": "250,000 VNĐ"
+        }
+      ],
+      "google_map": "https://www.google.com/maps?q=12+Cau+Giay,Hanoi"
     }
   ]
 }
