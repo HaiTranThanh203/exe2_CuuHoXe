@@ -31,6 +31,7 @@ function Layout({ children }) {
 
 export default function AppRoutes() {
   const services = data.rescue_services;
+  const users = data.users;
   return (
     <Router>
       <Layout>
@@ -38,8 +39,11 @@ export default function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/dang-nhap" element={<SignIn />} />
-          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/dang-nhap" element={<SignIn services={users} />} />
+          <Route
+            path="/homepage"
+            element={<HomePage rescue_services={services} />}
+          />
           <Route path="dang-ki" element={<SignUp />} />
           <Route
             path="rescue"

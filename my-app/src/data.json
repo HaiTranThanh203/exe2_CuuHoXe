@@ -4,15 +4,7 @@
       "id": 1,
       "username": "nguyen_van_a",
       "phone": "0987654321",
-      "password": "hashed_password_123",
-      "reviews": [
-        {
-          "id": 101,
-          "rescue_service": "Sửa Xe Minh Hoàng",
-          "rating": 4.5,
-          "comment": "Dịch vụ rất tốt, đến nhanh."
-        }
-      ]
+      "password": "hashed_password_123"
     }
   ],
   "rescue_services": [
@@ -27,7 +19,15 @@
       },
       "phone": "0981234567",
       "average_rating": 4.5,
-      "image_url": "https://example.com/images/minh_hoang.jpg"
+      "image_url": "https://example.com/images/minh_hoang.jpg",
+      "reviews": [
+        {
+          "id": 101,
+          "username": "nguyen_van_a",
+          "rating": 4.5,
+          "comment": "Dịch vụ rất tốt, đến nhanh."
+        }
+      ]
     },
     {
       "id": 202,
@@ -40,7 +40,8 @@
       },
       "phone": "0977654321",
       "average_rating": 4.2,
-      "image_url": "https://example.com/images/tuan_anh.jpg"
+      "image_url": "https://example.com/images/tuan_anh.jpg",
+      "reviews": []
     },
     {
       "id": 203,
@@ -53,7 +54,8 @@
       },
       "phone": "0965432187",
       "average_rating": 4.0,
-      "image_url": "https://example.com/images/hung_phat.jpg"
+      "image_url": "https://example.com/images/hung_phat.jpg",
+      "reviews": []
     },
     {
       "id": 204,
@@ -66,7 +68,8 @@
       },
       "phone": "0954321876",
       "average_rating": 4.3,
-      "image_url": "https://example.com/images/trung_kien.jpg"
+      "image_url": "https://example.com/images/trung_kien.jpg",
+      "reviews": []
     },
     {
       "id": 205,
@@ -79,7 +82,8 @@
       },
       "phone": "0943218765",
       "average_rating": 4.1,
-      "image_url": "https://example.com/images/hoang_long.jpg"
+      "image_url": "https://example.com/images/hoang_long.jpg",
+      "reviews": []
     },
     {
       "id": 206,
@@ -92,7 +96,8 @@
       },
       "phone": "0932109876",
       "average_rating": 3.9,
-      "image_url": "https://example.com/images/son_tung.jpg"
+      "image_url": "https://example.com/images/son_tung.jpg",
+      "reviews": []
     },
     {
       "id": 207,
@@ -105,7 +110,8 @@
       },
       "phone": "0921098765",
       "average_rating": 4.4,
-      "image_url": "https://example.com/images/phat_dat.jpg"
+      "image_url": "https://example.com/images/phat_dat.jpg",
+      "reviews": []
     },
     {
       "id": 208,
@@ -118,7 +124,8 @@
       },
       "phone": "0910987654",
       "average_rating": 4.6,
-      "image_url": "https://example.com/images/quang_minh.jpg"
+      "image_url": "https://example.com/images/quang_minh.jpg",
+      "reviews": []
     },
     {
       "id": 209,
@@ -131,7 +138,8 @@
       },
       "phone": "0909876543",
       "average_rating": 4.0,
-      "image_url": "https://example.com/images/thanh_cong.jpg"
+      "image_url": "https://example.com/images/thanh_cong.jpg",
+      "reviews": []
     },
     {
       "id": 210,
@@ -144,7 +152,8 @@
       },
       "phone": "0898765432",
       "average_rating": 4.7,
-      "image_url": "https://example.com/images/hoang_gia.jpg"
+      "image_url": "https://example.com/images/hoang_gia.jpg",
+      "reviews": []
     }
   ]
 }
