@@ -46,7 +46,7 @@ export default function AppRoutes() {
             path="rescue"
             element={<LocationFilter services={services} />}
           />
-          <Route path="test" element={<ProductDetail />} />
+          <Route path="rescue/:productId" element={<ProductDetail />} />
 
           
         </Routes>

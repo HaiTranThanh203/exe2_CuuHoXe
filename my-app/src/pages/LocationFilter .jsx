@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import RescueServiceCard from "../components/RescueServiceCard";
-
+import { Link } from "react-router-dom";
 const LocationFilter = ({ services }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -63,7 +63,9 @@ const LocationFilter = ({ services }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.length > 0 ? (
             filteredServices.map((service) => (
-              <RescueServiceCard key={service.id} service={service} />
+              
+              <RescueServiceCard  key={service.id} service={service} />
+           
             ))
           ) : (
             <p className="text-gray-500 text-center col-span-full">
