@@ -8,7 +8,7 @@ export default function TestimonialsSection({ rescue_services }) {
       serviceName: service.name,
     }))
   );
-
+ console.log(allReviews);
   return (
     <section className="bg-gray-900 text-white py-12 px-4 relative">
       <div className="container mx-auto text-center">
@@ -26,7 +26,7 @@ export default function TestimonialsSection({ rescue_services }) {
               <div className="flex items-center space-x-4">
                 <div>
                   <h3 className="font-bold text-xl">{review.username}</h3>
-                  <p className="text-gray-500 text-sm">{review.serviceName}</p>
+                  <p className="text-gray-500 text-sm">{review.comment}</p>
                 </div>
               </div>
 

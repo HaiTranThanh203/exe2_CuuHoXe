@@ -4,7 +4,7 @@ import RescueServices from "../components/RescueServices";
 import TestimonialsSection from "../components/TestimonialsSection";
 import data from "../data";
 export default function Home() {
-  const { rescue_services } = data;
+  const { rescue_services  } = data;
   return (
     <>
       <div className="container mx-auto">
