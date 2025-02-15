@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "start": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "postinstall": "npx tailwindcss init"
+    "format": "prettier --write ."
+    
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
