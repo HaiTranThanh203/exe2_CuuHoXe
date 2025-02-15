@@ -110,6 +110,13 @@
           "service_name": "Sửa chữa động cơ",
           "price": "Tùy vào mức độ hư hỏng"
         }
+      ], "reviews": [
+        {
+          "id": 101,
+          "username": "nguyen_van_a",
+          "rating": 4.5,
+          "comment": "Dịch vụ rất tốt, đến nhanh."
+        }
       ],
       "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.769419223778!2d105.84295727612826!3d21.001878088699584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad003eb14325%3A0x756d878e75ad6b6b!2zU-G7rWEgeGUgbcOheSAyNDcgTMOqIFRoYW5oIE5naOG7iw!5e0!3m2!1svi!2s!4v1739436576717!5m2!1svi!2s"
     },
@@ -138,6 +145,13 @@
           "service_name": "Bảo dưỡng xe",
           "price": "200,000 VNĐ"
         }
+      ], "reviews": [
+        {
+          "id": 101,
+          "username": "nguyen_van_a",
+          "rating": 4.5,
+          "comment": "Dịch vụ rất tốt, đến nhanh."
+        }
       ],
       "google_map":  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.769419223778!2d105.84295727612826!3d21.001878088699584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad003eb14325%3A0x756d878e75ad6b6b!2zU-G7rWEgeGUgbcOheSAyNDcgTMOqIFRoYW5oIE5naOG7iw!5e0!3m2!1svi!2s!4v1739436576717!5m2!1svi!2s"
     },
@@ -165,6 +179,14 @@
         {
           "service_name": "Thay xích xe",
           "price": "250,000 VNĐ"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 101,
+          "username": "nguyen_van_a",
+          "rating": 4.5,
+          "comment": "Dịch vụ rất tốt, đến nhanh."
         }
       ],
       "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.769419223778!2d105.84295727612826!3d21.001878088699584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad003eb14325%3A0x756d878e75ad6b6b!2zU-G7rWEgeGUgbcOheSAyNDcgTMOqIFRoYW5oIE5naOG7iw!5e0!3m2!1svi!2s!4v1739436576717!5m2!1svi!2s"
