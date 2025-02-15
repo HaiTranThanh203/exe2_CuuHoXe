@@ -14,10 +14,11 @@ import HomePage from "../pages/HomePage";
 import SignUp from "../pages/SignUp";
 import LocationFilter from "../pages/LocationFilter ";
 import data from "../data.json";
+import ProductDetail from "../pages/ProductDetail";
 function Layout({ children }) {
   const location = useLocation();
   const isSignInPage = location.pathname === "/dang-nhap";
-
+  
   return (
     <>
       {!isSignInPage && (
@@ -49,6 +50,9 @@ export default function AppRoutes() {
             path="rescue"
             element={<LocationFilter services={services} />}
           />
+          <Route path="rescue/:productId" element={<ProductDetail />} />
+
+          
         </Routes>
       </Layout>
     </Router>

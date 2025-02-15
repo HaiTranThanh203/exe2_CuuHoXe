@@ -34,7 +34,7 @@ export default function Header() {
         className="md:hidden text-gray-800 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Menu size={24} />
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       <nav
@@ -60,6 +60,22 @@ export default function Header() {
         >
           About Me
         </Link>
+
+        {/* Sign In & Sign Up Buttons - Hiện trên mobile */}
+        <div className="md:hidden mt-4 space-y-2">
+          <Link to="/dang-nhap">
+            <button className="flex items-center justify-center w-full space-x-1 bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
+              <User size={16} />
+              <span>Sign In</span>
+            </button>
+          </Link>
+          <Link to="/dang-ki">
+            <button className="flex items-center justify-center w-full space-x-1 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-400">
+              <Lock size={16} />
+              <span>Sign Up</span>
+            </button>
+          </Link>
+        </div>
       </nav>
 
       <div className="hidden md:flex space-x-3">
