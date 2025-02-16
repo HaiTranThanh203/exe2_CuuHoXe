@@ -1,20 +1,17 @@
 import React from "react";
 import { Star } from "lucide-react";
-
+import data from "../data.json";
 export default function TestimonialsSection({ rescue_services }) {
-  const allReviews = rescue_services.flatMap((service) =>
-    service.reviews.map((review) => ({
-      ...review,
-      serviceName: service.name,
-    }))
-  );
- console.log(allReviews);
+  const allReviews = data.reviews.slice(0, 4);
+
   return (
     <section className="bg-gray-900 text-white py-12 px-4 relative">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-2">What People say about us?</h2>
+        <h2 className="text-4xl font-bold mb-2">
+          Khách hàng nói gì về chúng tôi?
+        </h2>
         <p className="text-gray-300 mb-8">
-          Discover what our customers think about us
+          Khám phá ý kiến của khách hàng về dịch vụ của chúng tôi
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
