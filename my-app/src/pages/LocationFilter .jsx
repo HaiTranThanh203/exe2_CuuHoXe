@@ -19,8 +19,12 @@ const LocationFilter = ({ services }) => {
       let district =
         components.suburb || components.city_district || components.city || "";
 
-      // Loại bỏ từ "District" nếu có
-      district = district.replace(/\s*District\s*$/i, "").trim();
+      district = district
+        .replace(
+          /^\s*(District|Quận|Huyện)\s*|\s*(District|Quận|Huyện)\s*$/gi,
+          ""
+        )
+        .trim();
 
       return district;
     } catch (error) {
@@ -109,9 +113,7 @@ const LocationFilter = ({ services }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredServices.length > 0 ? (
           filteredServices.map((service) => (
-              
-            <RescueServiceCard  key={service.id} service={service} />
-           
+            <RescueServiceCard key={service.id} service={service} />
           ))
         ) : (
           <p className="text-gray-500 col-span-full">
