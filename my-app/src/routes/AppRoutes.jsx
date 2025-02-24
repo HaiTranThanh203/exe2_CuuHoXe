@@ -15,6 +15,7 @@ import SignUp from "../pages/SignUp";
 import LocationFilter from "../pages/LocationFilter ";
 import data from "../data.json";
 import ProductDetail from "../pages/ProductDetail";
+import { Analytics } from '@vercel/analytics/react';
 function Layout({ children }) {
   const location = useLocation();
   const isSignInPage = location.pathname === "/dang-nhap";
@@ -51,9 +52,10 @@ export default function AppRoutes() {
             element={<LocationFilter services={services} />}
           />
           <Route path="rescue/:productId" element={<ProductDetail />} />
-
+          
           
         </Routes>
+        <Analytics />
       </Layout>
     </Router>
   );
