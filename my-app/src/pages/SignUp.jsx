@@ -22,27 +22,6 @@ export default function SignUp() {
       return;
     }
 
-    // Giả sử lưu danh sách người dùng vào localStorage
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-    const isPhoneExist = existingUsers.some((user) => user.phone === phone);
-
-    if (isPhoneExist) {
-      setError("Số điện thoại đã được sử dụng!");
-      return;
-    }
-
-    const newUser = {
-      id: Date.now(),
-      username,
-      phone,
-      password,
-    };
-
-    const updatedUsers = [...existingUsers, newUser];
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-
-    // Đăng ký xong thì điều hướng về trang đăng nhập hoặc trang khác
     navigate("/dang-nhap");
   };
 
@@ -109,8 +88,8 @@ export default function SignUp() {
           </div>
 
           <button
+            className="w-full bg-gray-800 text-white py-2 rounded-md mt-4 hover:bg-gray-700 transition duration-200"
             type="submit"
-            className="w-full mt-6 px-4 py-2 bg-black text-white font-semibold rounded-md hover:bg-gray-800 transition duration-300"
           >
             Sign Up
           </button>

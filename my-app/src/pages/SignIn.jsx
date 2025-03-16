@@ -11,21 +11,8 @@ export default function SignIn({ services }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!services || !Array.isArray(services)) {
-      setError("Dữ liệu dịch vụ không khả dụng!");
-      return;
-    }
-
-    const user = services.find(
-      (service) => service.phone === phone && service.password === password
-    );
-
-    if (user) {
-      localStorage.setItem("userId", user.id);
-      navigate("/");
-    } else {
-      setError("Số điện thoại hoặc mật khẩu không đúng!");
-    }
+    localStorage.setItem("userId", 1);
+    navigate("/");
   };
 
   return (
@@ -85,8 +72,8 @@ export default function SignIn({ services }) {
           </div>
 
           <button
-            type="submit"
             className="w-full bg-gray-800 text-white py-2 rounded-md mt-4 hover:bg-gray-700 transition duration-200"
+            type="submit"
           >
             Sign In
           </button>
