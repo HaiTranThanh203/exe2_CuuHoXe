@@ -7,16 +7,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Company */}
         <div>
-          <h3 className="text-white text-xl font-semibold mb-4">
-            Về Chúng Tôi
-          </h3>
-          <ul className="space-y-2">
-            <li>Giới Thiệu Công Ty</li>
-            <li>Dịch Vụ Cứu Hộ</li>
-            <li>Sửa Chữa Xe</li>
-            <li>Đội Ngũ Kỹ Thuật</li>
-            <li>Liên Hệ</li>
-          </ul>
+          <h3 className="text-white text-xl font-semibold mb-4">Về Chúng Tôi</h3>
+          
+          {/* Facebook Fanpage Embed */}
+          <div className="mt-4">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61573076853116&tabs=timeline&width=340&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="300"
+              height="200"
+              style={{ border: "none", overflow: "hidden" }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
         </div>
 
         {/* Services */}
@@ -33,9 +38,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-white text-xl font-semibold mb-4">
-            Liên Kết Nhanh
-          </h3>
+          <h3 className="text-white text-xl font-semibold mb-4">Liên Kết Nhanh</h3>
           <ul className="space-y-2">
             <li>Tài Khoản Của Tôi</li>
             <li>Chính Sách Bảo Hành</li>
@@ -47,16 +50,15 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-white text-xl font-semibold mb-4">
-            Thông Tin Liên Hệ
-          </h3>
+          <h3 className="text-white text-xl font-semibold mb-4">Thông Tin Liên Hệ</h3>
           <div className="flex items-center space-x-2 mb-4">
             <Phone className="text-orange-500" />
-            <span>+84 912 345 678</span>
+            <span>033 600 9921</span>
           </div>
           <div className="flex items-center space-x-2 mb-4">
             <Mail className="text-orange-500" />
-            <span>hotro@cuuhoaxe.vn</span>
+            <span>
+            autohero.contact@gmail.com</span>
           </div>
           <div className="flex">
             <input
@@ -67,20 +69,6 @@ export default function Footer() {
             <button className="bg-orange-500 p-2 rounded-r-md">
               <Send className="text-white" size={20} />
             </button>
-          </div>
-          <div className="flex space-x-3 mt-4">
-            <a href="#" className="bg-blue-600 text-white p-2 rounded-full">
-              F
-            </a>
-            <a href="#" className="bg-red-500 text-white p-2 rounded-full">
-              I
-            </a>
-            <a href="#" className="bg-blue-400 text-white p-2 rounded-full">
-              T
-            </a>
-            <a href="#" className="bg-blue-800 text-white p-2 rounded-full">
-              L
-            </a>
           </div>
         </div>
       </div>

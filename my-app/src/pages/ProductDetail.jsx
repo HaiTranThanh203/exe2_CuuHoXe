@@ -1,15 +1,25 @@
 import { useState, useEffect } from "react";
-import { useParams ,useNavigate} from "react-router-dom";
-import { MapPinIcon, PhoneIcon, StarIcon, ClockIcon, WrenchScrewdriverIcon, PencilSquareIcon,ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { useParams, useNavigate } from "react-router-dom";
+import {
+  MapPinIcon,
+  PhoneIcon,
+  StarIcon,
+  ClockIcon,
+  WrenchScrewdriverIcon,
+  PencilSquareIcon,
+  ArrowLeftIcon,
+} from "@heroicons/react/24/solid";
+import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { SiZalo } from "react-icons/si"; // Import Zalo icon
 import data from "../data.json";
 
 export default function ProductDetail() {
   const [selectedService, setSelectedService] = useState(null);
   const [reviews, setReviews] = useState([]);
   const { productId } = useParams();
-  
   const [newReview, setNewReview] = useState({ name: "", comment: "", rating: 5 });
   const navigate = useNavigate();
+
   useEffect(() => {
     const service = data.rescue_services.find((service) => service.id === Number(productId));
     if (!service) {
@@ -17,7 +27,9 @@ export default function ProductDetail() {
       return;
     }
     setSelectedService(service);
-    const serviceReviews = data.reviews.filter((review) => review.rescue_service_id === Number(productId));
+    const serviceReviews = data.reviews.filter(
+      (review) => review.rescue_service_id === Number(productId)
+    );
     setReviews(serviceReviews);
   }, [productId]);
 
@@ -27,9 +39,12 @@ export default function ProductDetail() {
 
   const handleMapClick = () => {
     const destination = `${selectedService.address.street}, ${selectedService.address.ward}, ${selectedService.address.district}, ${selectedService.address.city}`;
-    const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+      destination
+    )}`;
     window.open(url, "_blank");
   };
+
   const handleSubmitReview = (e) => {
     e.preventDefault();
     if (!newReview.name || !newReview.comment) {
@@ -40,16 +55,21 @@ export default function ProductDetail() {
     setReviews([...reviews, reviewToAdd]);
     setNewReview({ name: "", comment: "", rating: 5 });
   };
+
   return (
     <div className="container mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Service Details */}
       <div className="md:col-span-2 p-6 bg-white shadow-lg rounded-lg">
-      <button onClick={() => navigate(-1)} className="flex items-center text-gray-700 hover:text-gray-900 mb-4">
+        <button onClick={() => navigate(-1)} className="flex items-center text-gray-700 hover:text-gray-900 mb-4">
           <ArrowLeftIcon className="h-6 w-6 mr-2" /> Quay lại
         </button>
         <h1 className="text-3xl font-bold text-gray-900">{selectedService.name}</h1>
         <div className="flex items-center mt-3 text-gray-700">
           <MapPinIcon className="h-6 w-6 text-red-500 mr-2" />
-          <p>{selectedService.address.street}, {selectedService.address.ward}, {selectedService.address.district}, {selectedService.address.city}</p>
+          <p>
+            {selectedService.address.street}, {selectedService.address.ward},{" "}
+            {selectedService.address.district}, {selectedService.address.city}
+          </p>
         </div>
         <div className="flex items-center mt-2 text-gray-700">
           <PhoneIcon className="h-6 w-6 text-blue-500 mr-2" />
@@ -67,6 +87,8 @@ export default function ProductDetail() {
           <ClockIcon className="h-6 w-6 text-green-500 mr-2" />
           <p className="font-medium">Thời gian làm việc: {selectedService.working_hours}</p>
         </div>
+
+        {/* Service & Pricing */}
         <h2 className="text-xl font-semibold mt-6 border-b pb-2">Dịch vụ & Bảng giá</h2>
         <ul className="list-disc pl-6 mt-3 space-y-2">
           {selectedService.services.map((svc, index) => (
@@ -76,19 +98,12 @@ export default function ProductDetail() {
             </li>
           ))}
         </ul>
-        <h2 className="text-xl font-semibold mt-6 border-b pb-2">Giới thiệu</h2>
-        <p className="mt-3 text-gray-700 leading-relaxed">{selectedService.description}</p>
+
+        {/* Customer Reviews */}
         <h2 className="text-xl font-semibold mt-6 border-b pb-2">Đánh giá từ khách hàng</h2>
         <div className="mt-4 space-y-4">
           {reviews.map((review) => (
             <div key={review.id} className="p-4 border rounded-lg shadow-md bg-gray-50">
-              <div className="flex items-center mb-2">
-                <img src="https://via.placeholder.com/50" alt={review.name} className="w-12 h-12 rounded-full mr-4" />
-                <div>
-                  <h4 className="font-bold">{review.name}</h4>
-                  <p className="text-sm text-gray-500">{review.date}</p>
-                </div>
-              </div>
               <p className="text-gray-600">{review.comment}</p>
               <p className="text-yellow-500 font-bold mt-2">⭐ {review.rating} / 5</p>
             </div>
@@ -107,18 +122,46 @@ export default function ProductDetail() {
             </button>
           </form>
         </div>
-      </div>
       
+      </div>
+    
+
+      {/* Google Map & Contact Buttons */}
       <div className="p-6 bg-white shadow-lg rounded-lg flex flex-col items-center">
-        <iframe src={selectedService.google_map} width="400" height="300" className="rounded-lg border-0" allowFullScreen loading="lazy"></iframe>
-        <a href={`tel:${selectedService.phone}`} className="mt-4 bg-green-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-green-700">
-          Gọi điện
+        <iframe
+          src={selectedService.google_map}
+          width="400"
+          height="300"
+          className="rounded-lg border-0"
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
+
+        {/* Call Button */}
+        <a
+          href={`tel:${selectedService.phone}`}
+          className="mt-4 bg-green-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-green-700 flex items-center justify-center space-x-2"
+        >
+          <FaPhoneAlt className="w-5 h-5" />
+          <span>Gọi điện</span>
         </a>
-        <a href={`https://zalo.me/${selectedService.phone}`} className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-blue-700">
-          Liên hệ qua Zalo
+
+        {/* Zalo Button */}
+        <a
+          href={`https://zalo.me/${selectedService.phone}`}
+          className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-blue-700 flex items-center justify-center space-x-2"
+        >
+          <SiZalo className="w-5 h-5" />
+          <span>Liên hệ qua Zalo</span>
         </a>
-        <button className="mt-2 bg-orange-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-orange-700" onClick={handleMapClick}>
-          Chỉ đường qua Google Map
+
+        {/* Google Map Button */}
+        <button
+          className="mt-2 bg-orange-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-orange-700 flex items-center justify-center space-x-2"
+          onClick={handleMapClick}
+        >
+          <FaMapMarkerAlt className="w-5 h-5" />
+          <span>Chỉ đường qua Google Map</span>
         </button>
       </div>
     </div>
